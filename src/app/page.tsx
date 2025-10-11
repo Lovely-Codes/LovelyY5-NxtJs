@@ -1,103 +1,98 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import { Smartphone, Headphones, Laptop, ShoppingBag, ShieldCheck, Truck } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="overflow-hidden">
+      {/* HERO */}
+      <section className="h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-purple-700 to-indigo-900 text-white">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl md:text-7xl font-extrabold mb-6"
+        >
+          Bienvenido a <span className="text-pink-400">Lovely Y5</span>
+        </motion.h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="text-lg md:text-2xl mb-8 max-w-2xl"
+        >
+          Tu tienda online de tecnología y gadgets al mejor precio 💻📱🎧
+        </motion.p>
+
+        <motion.a
+          href="/productos"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-pink-400 text-black px-6 py-3 rounded-2xl font-semibold shadow-lg hover:bg-pink-300 transition"
+        >
+          Ver Productos
+        </motion.a>
+      </section>
+
+      {/* FEATURES */}
+      <section className="py-20 px-6 md:px-16 bg-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+          ¿Por qué comprar en Lovely Y5?
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+            <Laptop className="mx-auto h-12 w-12 text-indigo-600 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Productos garantizados</h3>
+            <p className="text-gray-600">
+              Vendemos solo equipos originales con garantía oficial y soporte técnico.
+            </p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+            <ShieldCheck className="mx-auto h-12 w-12 text-indigo-600 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Pagos seguros</h3>
+            <p className="text-gray-600">
+              Tus transacciones están protegidas con encriptación de nivel bancario.
+            </p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+            <Truck className="mx-auto h-12 w-12 text-indigo-600 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Envíos rápidos</h3>
+            <p className="text-gray-600">
+              Recibe tus productos en 24 – 48 horas con seguimiento en tiempo real.
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* CATEGORÍAS */}
+      <section className="py-20 bg-gray-100 px-6 md:px-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+          Categorías populares
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition text-center">
+            <Smartphone className="mx-auto h-12 w-12 text-pink-500 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Smartphones</h3>
+            <p className="text-gray-600">Encuentra las últimas marcas y modelos.</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition text-center">
+            <Headphones className="mx-auto h-12 w-12 text-pink-500 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Audio</h3>
+            <p className="text-gray-600">Audífonos, parlantes y accesorios premium.</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition text-center">
+            <ShoppingBag className="mx-auto h-12 w-12 text-pink-500 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Ofertas</h3>
+            <p className="text-gray-600">Descuentos especiales por tiempo limitado.</p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
