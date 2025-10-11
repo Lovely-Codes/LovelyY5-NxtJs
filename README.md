@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Lovely Y5 - Tienda Online
 
-First, run the development server:
+Lovely Y5 es un emprendimiento de tecnología y gadgets fundado por un alumno que ha evolucionado desde sus primeros proyectos en HTML, migrando a Java y ahora desarrollando con Next.js.
+
+Este proyecto es una tienda online moderna, con carrito de compras, proceso de compra real, página de contacto y notificaciones automáticas por correo electrónico tanto para el administrador como para los clientes.
+
+## Características
+
+- Catálogo de productos con stock y precios.
+- Carrito de compras y proceso de compra con formulario de datos del cliente.
+- Instrucciones de pago y envío de comprobante por correo o WhatsApp.
+- Página de contacto para solicitudes y soporte, con sistema de tickets.
+- Notificaciones automáticas por correo electrónico (ventas y contacto).
+- Firma global editable para todos los correos.
+
+## Instalación y uso
+
+Instala las dependencias:
+
+```bash
+npm install
+```
+
+Ejecuta el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la tienda.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Personalización
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Edita los productos en `src/data/productos.json`.
+- Cambia la firma global en `src/app/api/firma.ts`.
+- Configura el envío de correos editando los datos SMTP en los archivos de API.
 
-## Learn More
+## Sobre el autor
 
-To learn more about Next.js, take a look at the following resources:
+Lovely Y5 es el resultado de la pasión por la tecnología y el aprendizaje continuo, migrando desde HTML y Java hasta Next.js para ofrecer una experiencia profesional y moderna.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Equipo de Lovely Y5 <3
+Contacto: +56 9 8959 8097
+Web: www.lovely.com
