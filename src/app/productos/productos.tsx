@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import productosData from "../data/productos.json";
+import productosData from "../../data/productos.json";
 import Image from "next/image";
 
 interface Producto {
