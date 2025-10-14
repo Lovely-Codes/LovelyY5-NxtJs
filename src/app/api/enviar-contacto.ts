@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     },
   });
 
-  const firma = `<p>Saludos Cordiales,</p>`;
+    // Variable 'firma' eliminada porque no se usa
 
   const mailOptionsAdmin = {
     from: 'lovely5.techserv@gmail.com',

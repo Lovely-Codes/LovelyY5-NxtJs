@@ -1,3 +1,8 @@
+// ...existing code...
+function procesarVenta(data: { producto: string; cantidad: number; cliente: string }) {
+  // lógica
+}
+// ...existing code...
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import { firmaGlobal } from './firma';
