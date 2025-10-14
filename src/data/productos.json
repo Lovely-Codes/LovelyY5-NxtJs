@@ -1,26 +1,28 @@
 [
   {
-    "id": 1,
-    "nombre": "Producto A",
-    "descripcion": "Descripción del producto A.",
-    "precio": 12000,
-    "imagen": "/public/file.svg",
-    "stock": 10
+  "id": 1,
+  "nombre": "Smartphone X",
+  "descripcion": "Smartphone de última generación.",
+  "precio": 12000,
+  "precioAnterior": 15000,
+  "imagen": "/public/file.svg",
+  "stock": 10
   },
   {
-    "id": 2,
-    "nombre": "Producto B",
-    "descripcion": "Descripción del producto B.",
-    "precio": 8500,
-    "imagen": "/public/globe.svg",
-    "stock": 5
+  "id": 2,
+  "nombre": "Audífono Pro",
+  "descripcion": "Audífonos premium con cancelación de ruido.",
+  "precio": 8500,
+  "precioAnterior": 9500,
+  "imagen": "/public/globe.svg",
+  "stock": 5
   },
   {
-    "id": 3,
-    "nombre": "Producto C",
-    "descripcion": "Descripción del producto C.",
-    "precio": 15000,
-    "imagen": "/public/window.svg",
-    "stock": 8
+  "id": 3,
+  "nombre": "Parlante Bluetooth",
+  "descripcion": "Parlante portátil con sonido envolvente.",
+  "precio": 15000,
+  "imagen": "/public/window.svg",
+  "stock": 8
   }
 ]

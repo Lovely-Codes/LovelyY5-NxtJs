@@ -34,6 +34,24 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
+        <footer style={{ width: "100%", background: "#f3f3f3", borderTop: "1px solid #eee", marginTop: 48, padding: "24px 0" }}>
+          <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
+            <div style={{ display: "flex", gap: 24 }}>
+              <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" style={{ color: "#e1306c", fontSize: 32 }}>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M29 16C29 8.82 23.18 3 16 3S3 8.82 3 16c0 6.44 4.84 11.77 11 12.82V20.5h-3v-4.5h3v-3.5c0-3.07 1.79-4.75 4.53-4.75 1.31 0 2.68.24 2.68.24v3h-1.51c-1.49 0-1.95.93-1.95 1.88V16h3.32l-.53 4.5h-2.79v8.32C24.16 27.77 29 22.44 29 16z" fill="#e1306c"/></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" style={{ color: "#e1306c", fontSize: 32 }}>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="#e1306c" strokeWidth="2"/><circle cx="16" cy="16" r="6" stroke="#e1306c" strokeWidth="2"/><circle cx="22" cy="10" r="1" fill="#e1306c"/></svg>
+              </a>
+              <a href="https://www.mercadopago.cl/" target="_blank" rel="noopener" aria-label="Mercado Pago" style={{ color: "#009ee3", fontSize: 32 }}>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><ellipse cx="16" cy="16" rx="13" ry="9" fill="#009ee3"/><path d="M10 16c1.5-2 5.5-2 7 0" stroke="#fff" strokeWidth="2"/><path d="M15 16c1.5-2 5.5-2 7 0" stroke="#fff" strokeWidth="2"/></svg>
+              </a>
+            </div>
+            <div style={{ color: "#333", fontSize: 16, marginTop: 8 }}>
+              LovelyY5 &lt;3 Todos los derechos reservados.
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );

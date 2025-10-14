@@ -2,38 +2,29 @@
 
 import { motion } from "framer-motion";
 import { Smartphone, Headphones, Laptop, ShoppingBag, ShieldCheck, Truck } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      {/* HERO */}
-      <section className="h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-purple-700 to-indigo-900 text-white">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-extrabold mb-6"
-        >
-          Bienvenido a <span className="text-pink-400">Lovely Y5</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-lg md:text-2xl mb-8 max-w-2xl"
-        >
-          Tu tienda online de tecnología y gadgets al mejor precio 💻📱🎧
-        </motion.p>
-
-        <motion.a
-          href="/productos"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-pink-400 text-black px-6 py-3 rounded-2xl font-semibold shadow-lg hover:bg-pink-300 transition"
-        >
-          Ver Productos
-        </motion.a>
+      {/* HERO PINK */}
+      <section style={{ background: '#ffb6ce', width: '100%', minHeight: '55vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', position: 'relative', padding: '48px 0' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32 }}>
+          <h1 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: 32, textShadow: '0 2px 8px #e1306c55' }}>
+            Conexión con cariño, cuidado con propósito.
+          </h1>
+          <div style={{ marginTop: 16 }}>
+            <svg width="180" height="220" viewBox="0 0 180 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="30" y="20" width="120" height="180" rx="32" fill="#fff" />
+              <circle cx="90" cy="180" r="12" fill="#ffb6ce" />
+              <path d="M60 80 Q90 40 120 80" stroke="#ffb6ce" strokeWidth="8" fill="none" />
+              <path d="M75 100 Q90 80 105 100" stroke="#ffb6ce" strokeWidth="6" fill="none" />
+              <path d="M80 120 Q90 110 100 120" stroke="#ffb6ce" strokeWidth="4" fill="none" />
+              <circle cx="90" cy="110" r="18" fill="#ffb6ce" />
+              <text x="90" y="116" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#fff">Y5</text>
+            </svg>
+          </div>
+        </div>
       </section>
 
       {/* FEATURES */}
@@ -74,23 +65,23 @@ export default function Home() {
           Categorías populares
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition text-center">
+          <Link href="/smartphones" className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition text-center cursor-pointer" style={{ textDecoration: "none" }}>
             <Smartphone className="mx-auto h-12 w-12 text-pink-500 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Smartphones</h3>
             <p className="text-gray-600">Encuentra las últimas marcas y modelos.</p>
-          </div>
+          </Link>
 
-          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition text-center">
+          <Link href="/audio" className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition text-center cursor-pointer" style={{ textDecoration: "none" }}>
             <Headphones className="mx-auto h-12 w-12 text-pink-500 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Audio</h3>
             <p className="text-gray-600">Audífonos, parlantes y accesorios premium.</p>
-          </div>
+          </Link>
 
-          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition text-center">
+          <Link href="/ofertas" className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition text-center cursor-pointer" style={{ textDecoration: "none" }}>
             <ShoppingBag className="mx-auto h-12 w-12 text-pink-500 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Ofertas</h3>
             <p className="text-gray-600">Descuentos especiales por tiempo limitado.</p>
-          </div>
+          </Link>
         </div>
       </section>
     </main>
