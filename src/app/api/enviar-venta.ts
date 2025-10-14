@@ -1,8 +1,4 @@
 // ...existing code...
-function procesarVenta(data: { producto: string; cantidad: number; cliente: string }) {
-  // lógica
-}
-// ...existing code...
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import { firmaGlobal } from './firma';
@@ -25,7 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     },
   });
 
-  const productosHtml = productos.map((p: any) => `<li>${p.nombre} x ${p.cantidad} ($${p.precio * p.cantidad})</li>`).join('');
+  type Producto = { nombre: string; cantidad: number; precio: number };
+  const productosHtml = (productos as Producto[]).map((p) => `<li>${p.nombre} x ${p.cantidad} ($${p.precio * p.cantidad})</li>`).join('');
 
   const mailOptionsAdmin = {
     from: 'lovely5.techserv@gmail.com',
