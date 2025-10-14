@@ -26,11 +26,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <nav style={{ width: "100%", padding: "16px 0", background: "#f3f3f3", borderBottom: "1px solid #eee", marginBottom: 24 }}>
-          <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", gap: 32 }}>
-            <Link href="/" style={{ fontWeight: "bold", color: "#333", textDecoration: "none" }}>Inicio</Link>
-              <Link href="/productos" style={{ color: "#333", textDecoration: "none" }}>Productos</Link>
-            <a href="/contacto" style={{ color: "#333", textDecoration: "none" }}>Contacto</a>
+        {/* Logo centrado */}
+        <header style={{ width: "100%", background: "#fff", borderBottom: "1px solid #eee", padding: "8px 0" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <img src="/logo-y5.svg" alt="Lovely Y5 Logo" width={32} height={32} />
+              <span style={{ fontWeight: 600, fontSize: 18, color: '#e1306c', letterSpacing: 1 }}>Lovely Y5</span>
+            </div>
+          </div>
+        </header>
+        {/* Navbar alineado a la derecha */}
+        <nav style={{ width: "100%", background: "#fff", borderBottom: "1px solid #eee", padding: "0 0 8px 0" }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "flex-end", alignItems: "center", gap: 32 }}>
+            <Link href="/" style={{ color: "#333", textDecoration: "none", fontSize: 15 }}>Inicio</Link>
+            <Link href="/productos" style={{ color: "#333", textDecoration: "none", fontSize: 15 }}>Productos</Link>
+            <Link href="/juego" style={{ color: "#333", textDecoration: "none", fontSize: 15 }}>Juego de la Suerte</Link>
+            <Link href="/servicio-tecnico" style={{ color: "#333", textDecoration: "none", fontSize: 15 }}>Servicio Técnico</Link>
+            <Link href="/contacto" style={{ color: "#333", textDecoration: "none", fontSize: 15 }}>Contacto</Link>
+            <Link href="/login" style={{ color: "#333", textDecoration: "none", fontSize: 15 }}>Login</Link>
+            <Link href="/intranet" style={{ color: "#333", textDecoration: "none", fontSize: 15 }}>Intranet</Link>
+            {/* Icono en navbar */}
+            <img src="/logo-y5-navbar.svg" alt="Lovely Y5 Icon" width={28} height={28} />
           </div>
         </nav>
         {children}
